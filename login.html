@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<style type="text/css">
+	body {
+			background: url(3.png) no-repeat center center fixed;
+            background-size: cover;
+  			
+  			overflow: hidden;
+			}
+
+	#form{
+
+		height: 200px;
+		width: 300px;
+		margin: 0px auto;
+		margin-top: 150px;
+
+	}
+	#h1,#pname,#ppass{
+		color: white;	
+	}
+	#login{
+		margin-top: 20px;
+	}
+
+		
+	</style>
+	
+</head>
+<body background="3.png">
+	
+	<div id="form">
+		<form action="" method="">
+		<div>
+			<h1 id="h1">Login</h1>
+		</div>
+		<div id="username">
+			<p id="pname">username:</p>
+			<input type="username" name="name" id="name" placeholder="username"><br>
+		</div>
+		<div id="password">
+			<p id="ppass">password:</p>
+			<input type="password" name="passwd" id="passwd" placeholder="password"><br>
+
+		</div>
+	<div id="login">
+		<input type="button" value="Login" onclick="login()">
+		<!--<button onclick="login()" type="button" value="Login">Login</button>-->
+	</div>
+		</form>
+	</div>
+<script type="text/javascript">
+
+function login(){
+	  
+
+		var username = document.getElementById("name").value;
+		var password = document.getElementById("passwd").value;
+		
+		if(username=="admin" && password=="admin"){
+			alert("success!")
+			window.location.href = "admin.html";
+			return false;
+		}
+		else{
+			alert("账号或密码错误");
+			window.location.href= "login.html";
+			return false;
+		}
+	}
+</script>
+	
+	
+		
+
+</body>
+</html>
